@@ -26,12 +26,13 @@ public class SuhailSharieff {
 			int a=sc.nextInt();
 			System.out.println("enter the second number ");
 			int b=sc.nextInt();
+			int num=0;
 			
 			boolean d=false;
 			if(a!=b){
 				for (int i = 0; i < Math.max(a, b); i++) {
 					if(((a+i)==(b-i))||((a-i)==(b+i))){
-						d=true;break;
+						d=true;num=i;break;
 					}
 				}
 			}
@@ -40,10 +41,10 @@ public class SuhailSharieff {
 
 			}else{d=false;}
 			if(d==true){
-				System.out.println("yes, you can somehow make two numbers equal by performing the operations mentioned above ");
+				System.out.println("yes, you can  make two numbers equal by performing the operations mentioned above by adding and subtracting or subtracting and adding "+num+" to first and second number respectively");
 
 			}else{
-				System.out.println("no");
+				System.out.println("not possible...");
 			}
 		}
 	}
