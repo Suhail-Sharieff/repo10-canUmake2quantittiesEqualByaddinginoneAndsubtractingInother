@@ -23,14 +23,14 @@ public class SuhailSharieff {
 		int t=sc.nextInt();
 		for(int v=0;v<t;v++){
 			System.out.println("enter the first number ");
-			int a=sc.nextInt();
+			float a=sc.nextFloat();
 			System.out.println("enter the second number ");
-			int b=sc.nextInt();
-			int num=0;
+			float b=sc.nextFloat();
+			float num=0f;
 			
 			boolean d=false;
 			if(a!=b){
-				for (int i = 0; i < Math.max(a, b); i++) {
+				for (float i = 0; i < Math.max(a, b); i=i+0.1f) {
 					if(((a+i)==(b-i))||((a-i)==(b+i))){
 						d=true;num=i;break;
 					}
@@ -41,7 +41,7 @@ public class SuhailSharieff {
 
 			}else{d=false;}
 			if(d==true){
-				System.out.println("yes, you can  make two numbers equal by performing the operations mentioned above by adding and subtracting or subtracting and adding "+num+" to first and second number respectively");
+				System.out.println("yes, you can  make two numbers equal by performing the operations mentioned above by adding and subtracting (or) subtracting and adding "+num+" to first and second number respectively");
 
 			}else{
 				System.out.println("not possible...");
